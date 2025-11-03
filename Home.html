@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Playlist</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body class="darkmode">
+
+    <header>
+        <h1>K-Playlist</h1>
+        <div class="navLinks">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Gallery.html">Gallery</a>
+
+        </div>
+
+        <div class="nav">
+            <h2>Created by <a href="https://github.com/Torigami2005" target="_blank"
+                    rel="noopener noreferrer">Torigami_2005</a></h2>
+            <button id="theme-switch">
+                <img src="darkmode.svg" alt="Dark mode">
+                <img src="lightmode.svg" alt="Light mode">
+            </button>
+        </div>
+    </header>
+
+
+    <aside>
+        <div class="sidebar">
+            <div class="input-container">
+                <h2>Enter Song Title</h2>
+                <input type="text" id="songInput" placeholder="Search...">
+                <h2>Enter URL</h2>
+                <input type="text" id="urlInput" placeholder="Paste URL...">
+                <button id="searchButton">Submit</button>
+            </div>
+        </div>
+    </aside>
+
+    <section>
+        <div class="mainContent">
+            <ul id="songList"></ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="additionalContent">
+            <div class="subContent">
+                <ul id="cartList"></ul>
+            </div>
+
+
+            <div class="cart-actions">
+                <div class="cart-summary">
+                    <p id="totalItemCount">Total Items: <span>0</span></p>
+                </div>
+                <button id="checkoutBtn">Checkout</button>
+                <button id="clearCartBtn">Clear Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 K-Playlist. All rights reserved.</p>
+    </footer>
+</body>
+<script src="Home.js"></script>
+
+</html>
