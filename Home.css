@@ -1,0 +1,799 @@
+:root {
+    --primary-color--: #4054c3;
+    --base-variant--: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(152, 194, 245, 1) 100%);
+}
+
+.darkmode {
+    --primary-color--: #7f7fc6;
+    --base-variant--: radial-gradient(circle, rgba(34, 34, 34, 1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--base-variant--);
+    transition: background 1.2s ease-in-out, color 1.2s ease-in-out;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 1.5s ease, color 1.5s ease, background 1.5s ease;
+
+}
+
+
+/* Style for header and footer */
+header {
+    background: #4054c3;
+    display: flex;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: background 1.2s ease-in-out, color 1.2s ease-in-out;
+
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+header h2 {
+    margin: 0;
+    padding-right: 20px;
+}
+
+header li {
+    list-style: none;
+    display: inline;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a :hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #1c1850;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: background 1.2s ease-in-out, color 1.2s ease-in-out;
+
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Theme switch button styles */
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--base-variant--);
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#theme-switch img {
+    fill: var(--primary-color--);
+}
+
+#theme-switch img:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:last-child {
+    display: block;
+}
+
+/* Navigation links style */
+.navLinks a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+/* Sidebar and main content styles */
+.sidebar {
+    width: 30%;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    margin-top: 60px;
+}
+
+.mainContent {
+    margin: 20px;
+    margin-left: 31.5%;
+    padding: 20px;
+    border: 5px solid;
+    border-color: var(--primary-color--);
+    border-radius: 10px;
+    height: 30vh;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+}
+
+/* Additional content styles */
+.additionalContent {
+    margin: 20px;
+    margin-left: 31.5%;
+    border-radius: 10px;
+    padding: 20px;
+    border: 5px solid;
+    height: 40vh;
+    border-color: var(--primary-color--);
+}
+
+
+
+.subContent {
+    height: 80%;
+    border-radius: 10px;
+    border: 5px solid;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    border-color: var(--primary-color--);
+}
+
+/* Custom scrollbar styles */
+.subContent::-webkit-scrollbar {
+    width: 12px;
+}
+
+.subContent::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.subContent::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff6b9d, #c44569);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.subContent::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff85ad, #d55579);
+}
+
+
+/* Input container styles */
+.input-container {
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 24px 24px 32px 24px;
+    background: #fff;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin: 20px;
+
+}
+
+.input-container h2 {
+    color: black;
+    margin: 0 0 10px 0;
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+/* Input field styles */
+#songInput,
+#urlInput {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 16px;
+    background: #cec9c9;
+    color: black;
+    font-size: 1.6em;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#searchButton {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    padding: 16px 0;
+    border: none;
+    border-radius: 16px;
+    background: #099dac;
+    color: #232323;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#searchButton:hover {
+    background: #0abfcd;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.input-container {
+    position: relative;
+    border: 5px solid;
+    border-color: var(--primary-color--);
+}
+
+/* Delete button styles */
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Song list and cart list styles */
+#songList {
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 8px;
+    scrollbar-width: thin;
+}
+
+#songList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#songList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#songList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#songList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#cartList {
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 8px;
+    scrollbar-width: thin;
+}
+
+#cartList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#cartList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#cartList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#cartList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Button styles */
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+}
+
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D7F8DC;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    list-style-type: none;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFE4E1;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #FFB6C1;
+    list-style-type: none;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.song-item .item-actions,
+.cart-item .item-actions {
+    margin-left: 20px;
+}
+
+.cart-actions {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Checkout and Clear Cart button styles */
+#checkoutBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 8px;
+    width: 10%;
+    background: #ff69b4;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#checkoutBtn:hover {
+    background: #ff85c1;
+}
+
+#clearCartBtn {
+    width: 10%;
+    border: none;
+    border-radius: 8px;
+    background: #ff4444;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#clearCartBtn:hover {
+    background: #ff6666;
+}
+
+.cart-summary {
+    width: 10%;
+    border: none;
+    border-radius: 8px;
+    background: #5fd683;
+    color: white;
+    font-size: 20px;
+    font-size: larger;
+    cursor: default;
+    font-weight: bold;
+}
+
+
+
+/* ------------------------------------------------------ABOUT PAGE SPECIFIC STYLES------------------------------------------------------ */
+/* about.html specific styles */
+.about-container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 50px 40px;
+    background-color: var(--container-bg, rgba(255, 255, 255, 0.05));
+    border-radius: 25px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    line-height: 1.9;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+/* Bigger heading */
+.about-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Larger, smoother paragraphs */
+.about-container p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    color: black;
+    text-align: justify;
+}
+
+/* Make links stand out more */
+.about-container a {
+    color: #050709;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-container a:hover {
+    color: #05080b;
+    text-decoration: underline;
+}
+
+body.darkmode .about-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #f5f5f5;
+}
+
+body.darkmode .about-container p {
+    color: white;
+}
+
+body.darkmode .about-container a {
+    color: #a3c8ff;
+}
+
+body.darkmode .about-container a:hover {
+    color: #d0e2ff;
+}
+
+
+/* ------------------------------------------------------ABOUT PAGE SPECIFIC STYLES------------------------------------------------------ */
+
+/* ------------------------------------------------------CONTACT PAGE SPECIFIC STYLES------------------------------------------------------ */
+
+/* === Base Contact Section Styles === */
+.contact-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: var(--base-variant--, #f4f4f4);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease forwards;
+    transition: background-color 1.4s ease, color 1.4s ease, box-shadow 1.4s ease, transform 0.6s ease;
+}
+
+/* Title */
+.contact-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color--, #4054c3);
+    transition: color 1.2s ease;
+}
+
+/* Paragraphs */
+.contact-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 1.2s ease;
+}
+
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.15);
+}
+
+.social-links img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.social-links img:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* === Dark Mode Styling === */
+.darkmode .contact-container {
+    background: rgba(30, 30, 30, 0.9);
+    color: #f0f0f0;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+.darkmode .contact-container h2 {
+    color: #a8b7ff;
+}
+
+.darkmode .contact-container p {
+    color: #dddddd;
+}
+
+.darkmode .social-links img {
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.15);
+}
+
+.darkmode .social-links a:hover img {
+    box-shadow: 0 4px 18px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------------------------------GALLERY PAGE SPECIFIC STYLES------------------------------------------------------ */
+
+.gallery-container {
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--base-variant--, #f7f9fc);
+  color: var(--text-color--, #222);
+}
+
+/* Gallery heading */
+.gallery-container h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: var(--primary-color--, #4054c3);
+}
+
+/* Grid layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  grid-auto-rows: auto; /* automatically create rows as needed */
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+
+/* Individual image items */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Image itself */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Dark mode styles */
+.darkmode .gallery-container {
+  background: #121212;
+  color: #e0e0e0;
+}
+.darkmode .gallery-container h2 {
+  color: #a8b7ff;
+}
+.darkmode .gallery-item {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+.darkmode .gallery-item:hover {
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+
+
+/*-------------------------------------------------------GALLERY PAGE SPECIFIC STYLES------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------RESPONSIVE DESIGN SECTION------------------------------------------------------ */
+
+/* ----- Large Tablets & Small Laptops (max-width: 1200px) ----- */
+@media (max-width: 1200px) {
+  /* Home Section */
+  .mainContent,
+  .additionalContent,
+  .input-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Contact Page */
+  .contact-container {
+    max-width: 85%;
+    margin: 60px auto;
+    padding: 40px 30px;
+  }
+
+  /* Gallery Page */
+  .gallery-container {
+    max-width: 90%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* ----- Tablets (max-width: 992px) ----- */
+@media (max-width: 992px) {
+  .mainContent,
+  .additionalContent,
+  .input-container,
+  .about-container,
+  .contact-container,
+  .gallery-container {
+    width: 90%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* ----- Large Phones (max-width: 768px) ----- */
+@media (max-width: 768px) {
+  .mainContent,
+  .additionalContent,
+  .input-container,
+  .about-container,
+  .contact-container,
+  .gallery-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .about-container h2,
+  .contact-container h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+/* ----- Small Phones (max-width: 480px) ----- */
+@media (max-width: 480px) {
+  .mainContent,
+  .additionalContent,
+  .input-container,
+  .about-container,
+  .contact-container,
+  .gallery-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .about-container p,
+  .contact-container p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+}
+
+/* ----- Ultra Small Devices (max-width: 360px) ----- */
+@media (max-width: 360px) {
+  .mainContent,
+  .additionalContent,
+  .input-container,
+  .about-container,
+  .contact-container,
+  .gallery-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------RESPONSIVE DESIGN SECTION------------------------------------------------------ */
